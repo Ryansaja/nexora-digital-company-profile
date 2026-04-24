@@ -1,0 +1,1 @@
+import type { MetadataRoute } from "next";export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||"https://nexoradigital.com";return ["en","id"].map(locale=>({url:`${base}/${locale}`,lastModified:new Date(),changeFrequency:"weekly",priority:locale==="en"?1:.9}))}

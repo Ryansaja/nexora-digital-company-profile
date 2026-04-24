@@ -1,0 +1,1 @@
+import { isLocale,type Locale } from "@/lib/i18n";import { notFound } from "next/navigation";export function generateStaticParams(){return[{locale:"en"},{locale:"id"}]}export default function LocaleLayout({children,params}:{children:React.ReactNode;params:{locale:Locale}}){if(!isLocale(params.locale))notFound();return children}

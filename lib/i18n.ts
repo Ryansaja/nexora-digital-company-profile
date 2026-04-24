@@ -1,0 +1,1 @@
+import en from "@/dictionaries/en.json";import id from "@/dictionaries/id.json";export const locales=["en","id"] as const;export type Locale=(typeof locales)[number];export function isLocale(v:string):v is Locale{return locales.includes(v as Locale)}export function getDictionary(locale:Locale){return locale==="id"?id:en}
